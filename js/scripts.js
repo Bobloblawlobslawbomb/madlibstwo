@@ -1,5 +1,6 @@
-$(function () {
-  $("#formOne").submit(function (event) {
+$(document).ready(function () {
+  $("#formOne").submit(function (e) {
+    e.preventDefault()
     const person1Input = $("input#person1").val()
     const person2Input = $("input#person2").val()
     const animalInput = $("input#animal").val()
@@ -15,7 +16,5 @@ $(function () {
     $(".noun").text(nounInput)
 
     $("#story").show()
-
-    event.preventDefault()
   })
 })
